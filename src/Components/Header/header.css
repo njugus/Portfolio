@@ -1,9 +1,8 @@
-.header{
+/* .header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* border: 1px solid gray; */
     flex-wrap: wrap;
 }
 .portfolio-header-links{
@@ -11,13 +10,91 @@
     flex-direction: row;
     list-style-type: none;
     gap: 5rem;
-    /* border: 1px solid gray; */
     padding: 0 5px;
 }
 span{
     color: crimson;
+} */
+
+/* Default Styling */
+
+/* Default Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width : 600px){
-    
+/* Logo */
+.portfolio-header-name h1 {
+    font-size: 2rem;
+    font-weight: bold;
 }
+
+span {
+    color: crimson;
+}
+
+/* Desktop Navigation */
+.portfolio-header-links {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 3rem;
+    padding: 0;
+}
+
+.portfolio-header-links li {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.portfolio-header-links li:hover {
+    color: crimson;
+}
+
+/* MOBILE STYLING */
+@media screen and (max-width: 768px) {
+    /* Hide the links initially */
+    .portfolio-header-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        background: white;
+        width: 200px; /* Ensure enough space */
+        padding: 1rem;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        text-align: center;
+        z-index: 1000; /* Ensure it's above other elements */
+    }
+
+    /* Show when active */
+    .portfolio-header-links.active {
+        display: flex; /* This is key! */
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1100;
+    }
+}
+
+/* Desktop - Always Show Nav */
+@media screen and (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+
