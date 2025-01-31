@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid gray; */
+    flex-wrap: wrap;
+}
+.portfolio-header-links{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 5rem;
+    /* border: 1px solid gray; */
+    padding: 0 5px;
+}
+span{
+    color: crimson;
+}
+
+@media screen and (max-width : 600px){
+    
+}
